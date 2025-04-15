@@ -492,13 +492,13 @@ function gameSetup(data) {
     svgContainer.append('text')
         .attr('text-anchor', 'middle')
         .attr('x', screen_width / 2)
-        .attr('y', screen_height / 2 - 50)
-        .attr('font-size', '32')
+        .attr('y', screen_height / 2 - 150)
+        .attr('font-size', '60')
         .attr('fill', 'black')
         .attr('id', 'instruc1_end_block')
         .attr('font-family', 'Arial')
 		.attr('display', 'none')
-        .text('Finished first block.');
+        .text('End of the first block!');
 
     // Show the instructions for the main task
         svgContainer.append('text')
@@ -790,6 +790,7 @@ function startCategory() {
 
     svgContainer.select("#instruc3").attr("display", "none");
     svgContainer.select("#instruc2").attr("display", "none");
+	svgContainer.select("#money").attr("display", "none");
 
     if (trial === 1) {
         startdate = Date.now();
