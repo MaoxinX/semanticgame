@@ -38,7 +38,7 @@
               We would like to invite you the take part in the following study named "Memory Recall Experiment".
               </p>
               <p>
-                <br>This will take approximately 20 minutes, and you can earn a minimum of $8 as the participation fee. <strong>The amount you receive will depend on your performance.</strong><br><br>
+                <br>This will take approximately 40 minutes, and you can earn a minimum of $12 as the participation fee. <strong>The amount you receive will depend on your performance.</strong><br><br>
                 Please understand that we <em>reserve the right to not compensate entries</em> that fail to follow instructions.
                 <br>  
               </p>
@@ -60,7 +60,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions1', 'container-consent');">
+              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions2', 'container-consent');">
               <span class="glyphicon glyphicon-ok"></span> I Agree 
               </button>
           </center>
@@ -68,10 +68,11 @@
     </div>
      
     <!-- Instruction-->
+	<!--Skip this now because it's not online -->
     <div id="container-instructions1" style="display:none; padding: 50px">
         <h1>Welcome to the Memory Recall Experiment!</h1>
         <hr>
-      <div class="instructions well">
+      	<div class="instructions well">
             <p> 
                 If you are not using Google Chrome, please reopen the link in Chrome. The experiment won't function properly on other browsers.
             </p>
@@ -101,7 +102,7 @@
             <p>
                 <br>Click "Next" to see the instructions in the next page.
             </p>
-        </div>
+		</div>
         <hr>
         <center>
               <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-consent', 'container-instructions1');">
@@ -114,32 +115,35 @@
               <span class="glyphicon glyphicon-arrow-right"></span> Next
               </button>
           </center>
-      </div>
+    </div>
 
-      <div id="container-instructions2" style="display:none; padding: 50px">
-        <h1>The Overall Goal</h1>
+    <div id="container-instructions2" style="display:none; padding: 50px">
+        <h1>The Task</h1>
         <hr>
-      <div class="instructions well">
-            <p>
-                In this study, we will test your ability to recall words based on different prompts. 
+      	<div class="instructions well">
+			<h2>
+            	<p>In this study, we will test your ability to recall words based on different prompts across a series of trials. </p>
+			</h2>
+			
+			<p>
+                <br>On each trial, you will see a word or phrase prompt indicating a <em>category</em>. 
             </p>
             <p>
-                <br>On each trial, you will see a word or phrase prompt indicating a category. 
+                <br>As soon as you see the prompt, you should start verbally naming words that belong to the category. 
             </p>
+			
             <p>
-                <br>As soon as you see the prompt, you should start naming words that belong to the category. 
+                <br> You can decide, at any time, to move on to the next trial to recall words from a new category; once left, you cannot return to a category. 
+                <!-- When you'd like to switch to a new category, press the “<span style="color: red;">ENTER</span>” key, upon which a new category label will appear after a time delay. You must now recall words belonging to the new category.    -->
             </p>
+			
+			<p> <br>Your voice will be recorded, therefore, please speak clearly so that all the words you say are recorded. </p>
 
-            <p>
-                <br> You will have the flexibility to decide how long you want to spend on each category.  
-                You will press “<span style="color: red;">ENTER</span>” whenever you want to change categories.  
-                After a delay, the new category label will appear and, as before, your task is to recall words related to that category.   
-            </p>
 
         </div>
         <hr>
         <center>
-              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions1', 'container-instructions2');">
+              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-consent', 'container-instructions2');">
               <span class="glyphicon glyphicon-arrow-left"></span> Back 
               </button>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -149,28 +153,27 @@
               <span class="glyphicon glyphicon-arrow-right"></span> Next
               </button>
           </center>
-      </div>
+    </div>
     
-
-        <div id="container-instructions3" style="display:none; padding: 50px">
-            <h1>Scoring</h1>
+    <div id="container-instructions3" style="display:none; padding: 50px">
+            <h1>Scoring Rules</h1>
             <hr>
         <div class="instructions well">            
+			
             <p>
-                You will earn a point for each unique item you recall for each category; repetitions will not be counted. Your score will be displayed in real-time on the screen.
+				<br> You will receive a score of one point for each valid recall for a category. If a recall isn't valid, you won't receive a point.
+			</p>
+			<p>
+				<br> To ensure the recalled word is valid, please follow the following rules:
+				<p>
+					<ol>
+						<li>Say words you think belong to a category, not just words that are related. (e.g, for category "TREES" valid recalls are "Sequoia" or "apple tree" but not "Leaves" or "Trunk") </li>
+						<li>DO NOT repeat words within a category</li>
+						<li>DO NOT say variations of the same word (e.g., for category "FOODS", "apple" and "apples" will not be considered as two separate valid recalls).</li>
+					<ol>
+				</p>
             </p>
-            <p>
-                <br>If you think you would do better with a new category, you should change categories.
-                 However, each time you change categories, you will have to wait before the new category label appears. 
-                 As such, there is a time penalty whenever you switch to a new category. 
-            </p>
-            <p>
-                <br>The entire task will take a total of <strong>12 minutes</strong>. 
-            </p>
-            
-            <p>
-                <br><strong>Your goal is to name as many words as possible within the 12-minute time frame. The more words you name during these 12 minutes, the more money you will earn.</strong>
-            </p>
+
         </div>
         <hr>
         <center>
@@ -180,217 +183,79 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions3_2', 'container-instructions3');">
+              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions4', 'container-instructions3');">
               <span class="glyphicon glyphicon-arrow-right"></span> Next
               </button>
           </center>
 
-      </div>
-      <div id="container-instructions3_2" style="display:none; padding: 50px">
-        <h1>Example Screenshot of the Recall Experiment</h1>
-        <hr>
-    <div class="instructions well">    
-        <p>
-            Below is a screenshot from the experiment. This example is provided to help you understand how the experiment works.
-        </p>
-
-        <p>
-            <br>1. The <strong>category</strong> and your <strong>score</strong> for that category will appear in the center.
-        </p>
-
-        <p>
-            <br>2. Your <strong>total score</strong> and <strong>the remaining time</strong> will be shown in the top right corner.
-        </p>
-
-        <p>
-            <br>3. A prompt at the bottom will instruct you to press the <strong>“Enter”</strong> key when you are ready to move to the next category.
-        </p>
-        <br>
-        <div>
-            <center>
-                <img src="images/point.png" alt="Instruction Image" style="width:60%">
-            </center>
-        </div>
-    </div>
-    <hr>
-    <center>
-          <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions3', 'container-instructions3_2');">
-          <span class="glyphicon glyphicon-arrow-left"></span> Back 
-          </button>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions4', 'container-instructions3_2');">
-          <span class="glyphicon glyphicon-arrow-right"></span> Next
-          </button>
-      </center>
-    </div>
-
-
+	</div>
+	
     <div id="container-instructions4" style="display:none; padding: 50px">
-        <h1>Earnings Summary</h1>
-        <hr>
-    <div class="instructions well">     
-        <p>
-            Remember, your participation fee will be based on the total number of unique words you recall.
-        <p>
-        <p>
-            <br>When you choose to move on to a new category, you will see an update showing your total earnings.
-        </p>
-        <br>
-            Below is an example screenshot of the earnings summary screen.
-        </p>
-        <br>
-        <div>
-            <center>
-                <img src="images/money.png" alt="Instruction Image" style="width:60%">
-            </center>
-        </div>
-    </div>
-    <hr>
-    <center>
-          <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions3_2', 'container-instructions4');">
-          <span class="glyphicon glyphicon-arrow-left"></span> Back 
-          </button>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions5', 'container-instructions4');">
-          <span class="glyphicon glyphicon-arrow-right"></span> Next
-          </button>
-      </center>
-  </div>
-
-      <div id="container-instructions5" style="display:none; padding: 50px">
-        <h1>The Time Delay</h1>
-        <hr>
-        <div class="instructions well">      
+            <h1> Game Goal & Structure </h1>
+            <hr>
+        <div class="instructions well">            
+			<h2> Your main goal is to recall as many words as you can across the entire experiment. </h2>
             <p>
-                During the delay between categories, you will NOT be able to add to your score by recalling words.
+                You will do this task in two trial blocks with a break in-between. Each block will be exactly 15 minutes long.
             </p>
+			
+			<p>
+                
+				<br> The more words you recall, the higher your final compensation will be. Therefore, you should focus on maximizing your score within each block.
+            </p>
+			
             <p>
-                <br>The screenshot below shows what the screen will look like during the delay.
+                <br> At any time, if you think you would do better with a new category, you can change categories by pressing ENTER.
+                <br> However, each time you change categories, you will have to wait before the new category label appears. 
+           	  	<br> As such, there is a time penalty whenever you switch to a new category. 
             </p>
-            <br>
-            <div>
-                <center>
-                    <img src="images/time1.png" alt="Instruction Image" style="width:60%">
-                </center>
-            </div>
-            <br>
-            <p>
-                You will have to maintain focus on the task during the delay. 
-                A cross will be shown on the center of the screen.
-            </p>
+            
         </div>
         <hr>
-    <center>
-          <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions4', 'container-instructions5');">
-          <span class="glyphicon glyphicon-arrow-left"></span> Back 
-          </button>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions6', 'container-instructions5');">
-          <span class="glyphicon glyphicon-arrow-right"></span> Next
-          </button>
-      </center>
-  </div>
-
-  <div id="container-instructions6" style="display:none; padding: 50px">
-    <h1>Words examples</h1>
-    <hr>
-<div class="instructions well">        
-    <p>
-        As an example of the category prompt, you might see the word “TREES”.  In response, you could say “Oak”, “Pine”, “Willow”, “Cedar” and so on.
-    </p>
-
-    <p>
-        <br>You will get a point for repeating the same word between categories (if it fits with each category) but you will not get a point for repeating a word within a category.
-    </p>
-
-    <br>
-    <p>
-        For example, you might have said “Apple” in response to the category “TREES” and then say that word again in response to the category “TYPES OF PIE”.
-    </p>
-
-</div>
-<hr>
-<center>
-      <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions5', 'container-instructions6');">
-      <span class="glyphicon glyphicon-arrow-left"></span> Back 
-      </button>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button type="button" class="btn btn-primary btn-lg" onClick="return show('attention-check', 'container-instructions6');">
-      <span class="glyphicon glyphicon-arrow-right"></span> Next
-      </button>
-  </center>
-</div>
-
-<div id="attention-check" style="display:none; padding: 50px">
-    <h1>Attentional Check</h1>
-    <hr>
-
-        <form id='attentional'>
-            <div class="row question">
-
-        <p>
-            Before you begin the experiment, we need to ensure you understand its purpose. If you answer the following questions incorrectly, you will not be able to proceed to the next steps.
-        </p>
-        <br>
-        <div class="questions" id="goal">
-            What is the overall goal of the experiment? 
-            <br>
-            <select id="goal" name="goal">
-             <option value=""></option>
-             <option value="score">Recall as many words as possible in each category</option>
-             <option value="total">Maximize your total score and earn the highest possible rewards</option>
-             <option value="improve">Improve your memory performance over time</option>
-            </select>
-            <br>
-            <p id="goal-feedback" style="color: red; display: none;">
-                Remember, you don't have to recall as many words as possible in each category.
-                You can decide when to leave a category, but each time you do, you will have to wait before you can accumulate more words.
-                Your primary objective is to optimize performance in 30 minutes. 
-            </p>
-         </div>
-
-         <br>
-
-         <div class="questions" id="shape">
-             How often will the shape appear during the time delay? 
-             <br>
-             <select id="shape" name="shape">
-              <option value=""></option>
-              <option value="each">The shape will appear during each time delay</option>
-              <option value="some">The shape will appear during some of the time delays</option>
-              <option value="improve">The shape only appears when a certain condition is met</option>
-              <option value="random">The shape appears randomly during the experiment</option>
-            </select>
-            <br>
-            <p id="shape-feedback" style="color: red; display: none;">
-                The shape is to ensure that you stay focused during the time delay so it will only happen on some of the trials during the time delay.</p>
-          </div>
-
-        </div>
-    </form>
-
-    <hr>
         <center>
-              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions6', 'attention-check');">
+              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions3', 'container-instructions4');">
               <span class="glyphicon glyphicon-arrow-left"></span> Back 
               </button>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button type="button" class="btn btn-primary btn-lg" onClick="checkattention();">
+              <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions-flow', 'container-instructions4');">
               <span class="glyphicon glyphicon-arrow-right"></span> Next
               </button>
           </center>
-        </div>
-    
+
+	</div>
+	
+	<!-- container-isntructions-flow-->
+    <div id="container-instructions-flow" style="display:none; padding: 50px">
+        <h1>Example Screenshots</h1>
+        <hr>
+    	<div class="instructions well">    
+	        <p>
+	            Below are some example screenshots of different phases of the experiment
+	        </p>
+	        
+	        <div>
+	            <center>
+	                <img src="images/instruction_flow.png" alt="Instruction Image" style="width:60%">
+	            </center>
+	        </div>
+    	</div>
+    <hr>
+    <center>
+          <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-instructions3', 'container-instructions-flow');">
+          <span class="glyphicon glyphicon-arrow-left"></span> Back 
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-primary btn-lg" onClick="return show('container-info', 'container-instructions-flow');">
+          <span class="glyphicon glyphicon-arrow-right"></span> Next
+          </button>
+      </center>
+    </div>
+	
+
     <!-- Initial Form for basic information 
     **TODO** Update questions accordingly to what kinds of information you require-->
     <div id="container-info" style="display:none">
@@ -488,7 +353,13 @@
     <!-- Game page -->
     <div id="container-exp" style="display:none">
     </div>
-
+	
+	<!-- End Block -->
+	<div id = "container-end-block" style = "display:none">
+		<h1> End Block <h2>
+	</div> 
+ 		
+	
     <!-- Thank you page 
         **TODO** Update the completion code if necessary-->
     <div id="container-not-an-ad" style="display:none">
@@ -518,8 +389,8 @@
                     Submit 
                 </button>
             </center>
-            <h2>If you do not receive compensation in 5 business days please email ivrylab@gmail.com.</h2>
-            <h2>Your completion code is: "BB922D14".</h2>
+            <h2>If you do not receive compensation in 5 business days please email ivrylab@colorado.edu.</h2>
+            <!-- <h2>Your completion code is: "BB922D14".</h2> -->
             <h2>You have a wonderful life now.</h2>
         </div>
     </div>
@@ -564,4 +435,4 @@
   <script src="static/lib/backbone-min.js"></script>
 
   <!--<script src="https://unpkg.com/compromise"></script> -->
-<script src="index 4 32.js"></script>
+<script src="index_within_subj.js"></script>
