@@ -557,7 +557,7 @@ function gameSetup(data) {
         .attr('id', 'attention')
         .attr('display', 'none')
         .attr('font-family', 'Arial')
-        .text('Remember to keep an eye on the shape that will appear below:');
+        .text('Please continue to pay attention to the task!');
 
     // Draw the fixation cross
     svgContainer.append('image')
@@ -1156,7 +1156,7 @@ function startDelay() {
     svgContainer.select("#delay").attr("display", "block");
     svgContainer.select("#prepare").attr("display", "block");
     svgContainer.select("#attention").attr("display", "block");
-    svgContainer.select("#fixation").attr("display", "block");
+    // svgContainer.select("#fixation").attr("display", "block");
     
     // Calculate the delay period
     time_period = phase
@@ -1470,7 +1470,20 @@ function nextTrial(){
     recordTrialSubj(trialcollection, subjTrials);
     createSubject(subjectcollection, subject);
 
-    if (counter < totalTrials/2) {
+
+	if (counter == totalTrials/2 ) {
+        // Checks whether the experiment is complete, if not continues to next trial
+
+		// SHRUTHI : NEED TO ADD A endBlock function 
+		document.addEventListener('keydown', handleKeyPress);
+        endBlock();
+    } else if (counter == totalTrials){
+        // Checks whether the experiment is complete, if not continues to next trial
+        document.exitPointerLock();
+		
+		// SHRUTHI : NEED TO ADD A endBlock function 
+        endGame();
+    } else {
         d3.select('#total').text('Total Score: ' + totalscore);
         d3.select('#time').text('Time left:  ' + time);
 
@@ -1497,19 +1510,7 @@ function nextTrial(){
 
     startCategory();
     
-    } else if (counter >= totalTrials/2 && counter < totalTrials) {
-        // Checks whether the experiment is complete, if not continues to next trial
-
-		// SHRUTHI : NEED TO ADD A endBlock function 
-		document.addEventListener('keydown', handleKeyPress);
-        endBlock();
-    } else {
-        // Checks whether the experiment is complete, if not continues to next trial
-        document.exitPointerLock();
-		
-		// SHRUTHI : NEED TO ADD A endBlock function 
-        endGame();
-    }
+    } 
 	
 }
 
@@ -1591,6 +1592,7 @@ function endBlock() {
 	
  	// reset trial Number
 	gamephase = 5
+	totalscore = 0;
 	trial = 1;
 	counter = target_file_data.numtrials/2;
 	isInDelay = false
@@ -1631,7 +1633,9 @@ function endGame() {
     d3.select("#minus").attr("display", "none");
     d3.select("#press").attr("display", "none");
 
-    show('container-not-an-ad', 'container-exp');
+    setTimeout(function(){
+		show('container-not-an-ad', 'container-exp');
+	}, 10000);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
