@@ -60,6 +60,7 @@ function closeFullScreen() {
 // Object used to track subject data (uploaded to database)
 var subject = {
     id: null,
+	condition: null,
     age: null,
     sex: null,
     handedness: null,
@@ -162,12 +163,13 @@ function checkInfo() {
 
     var values = $("#infoform").serializeArray();
     subject.id = values[0].value;
-    subject.age = values[1].value;
-    subject.sex = values[2].value;
-    subject.handedness = values[3].value;
-    subject.returner = values[4].value;
-    subject.ethnicity = values[5].value;
-    subject.race = values[6].value;
+	subject.condition = values[1].value
+    subject.age = values[2].value;
+    subject.sex = values[3].value;
+    subject.handedness = values[4].value;
+    subject.returner = values[5].value;
+    subject.ethnicity = values[6].value;
+    subject.race = values[7].value;
     if (noSave) {
         // show('mouse-control', 'container-info');
         
@@ -177,6 +179,7 @@ function checkInfo() {
 		return;
     }
     console.log(subject.id);
+    console.log(subject.condition);
     console.log(subject.handedness);
     console.log(values)
     if (!subject.id || !subject.age || !subject.sex || !subject.handedness) {
@@ -334,7 +337,7 @@ function gameSetup(data) {
     screen_width = window.screen.availWidth;
 
     // Experiment parameters, subject_ID is no obsolete
-    experiment_ID = "memory"; // **TODO** Update experiment_ID to label your experiments
+    experiment_ID = subject.condition; // this indicates which travel order was used
     subject_ID = Math.floor(Math.random() * 10000000000);
 
     // Reading the json target file into the game
@@ -1517,7 +1520,7 @@ function nextTrial(){
 
 // Function to start the game
 function startGame() {
-    target_files = "tgt_files/category_order_from_pilot.json";
+    target_files = "tgt_files/" +subject.condition; //"/category_order_from_pilot.json";
     fileName = target_files;
     console.log(fileName);
     subject.tgt_file = fileName;
