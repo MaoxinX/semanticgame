@@ -265,20 +265,21 @@
 
       <form id='infoform'>
           <div class="row question">
-
+			  
+              <div class="questions" id="condition">
+                  Condition file: 
+                  <select id="condition" name="condition">
+                      <option value=""></option>
+                      <option value="category_order_from_pilot1.json">travel1</option>
+                      <option value="category_order_from_pilot2.json">travel2</option>
+                  </select>
+              </div>
+			  
               <div class="questions" id="email">
                   Prolific WorkerID: 
                   <input id="email-input" type="text" name="email" value="">
               </div>
             
-            <div class="questions" id="condition">
-                Condition file: 
-                <select id="condition" name="condition">
-                    <option value=""></option>
-                    <option value="category_order_from_pilot1.json">travel1</option>
-                    <option value="category_order_from_pilot2.json">travel2</option>
-                </select>
-            </div>
 			
               <div class="questions" id="age">
                   Age: 

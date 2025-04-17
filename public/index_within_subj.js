@@ -162,14 +162,21 @@ function checkInfo() {
     }
 
     var values = $("#infoform").serializeArray();
-    subject.id = values[0].value;
-	subject.condition = values[1].value
+    subject.id = values[1].value;
+	subject.condition = values[0].value
     subject.age = values[2].value;
     subject.sex = values[3].value;
     subject.handedness = values[4].value;
     subject.returner = values[5].value;
     subject.ethnicity = values[6].value;
     subject.race = values[7].value;
+	
+	
+	if(!subject.condition){
+		alert("Please enter condition");
+		return;
+	}
+	
     if (noSave) {
         // show('mouse-control', 'container-info');
         
